@@ -5,9 +5,11 @@ import ToDo from "./ToDo";
 const ToDoList = ({ toDoList }) => {
 	return (
 		<div>
-			{toDoList.map((todo) => {
-				return <ToDo todo={todo} />;
+			{toDoList.map(todo => {
+				return (<ToDo todo={todo} handToggle={handToggle} handleFilter={handleFilter} />
+            )
 			})}
+            <button style={{margin: '20px'}} onClick={handleFilter}>Clear Completed</button>
 		</div>
 	);
 };

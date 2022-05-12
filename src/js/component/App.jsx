@@ -17,6 +17,13 @@ function App() {
 		setToDoList(mapped);
 	};
 
+	const handleFilter = () => {
+		let filtered = toDoList.filter((tasks) => {
+			return filtered.complete;
+		});
+		setToDoList(filtered);
+	};
+
 	return (
 		<div className="App">
 			<Header />
